@@ -4,30 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/cat_background"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tvCoin"
-        android:layout_width="256dp"
-        android:layout_height="256dp"
+        android:layout_width="192dp"
+        android:layout_height="192dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/circle_tv"
         android:gravity="center"
         android:text="coin"
-        android:textSize="96sp"
+        android:textSize="64sp"
         app:layout_constraintBottom_toTopOf="@+id/btnToss"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnToss"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="32dp"
         android:text="toss"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvHistory"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="History:"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvHistory1"
+        app:layout_constraintEnd_toEndOf="@+id/btnToss"
+        app:layout_constraintStart_toStartOf="@+id/btnToss" />
+
+    <TextView
+        android:id="@+id/tvHistory1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/circle_tv"
+        android:gravity="center"
+        android:text="coin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvHistory2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHistory2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/circle_tv"
+        android:gravity="center"
+        android:text="coin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvHistory"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvHistory"
+        app:layout_constraintTop_toBottomOf="@+id/tvHistory"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvHistory3"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/circle_tv"
+        android:gravity="center"
+        android:text="coin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvHistory2"
+        app:layout_constraintTop_toTopOf="@+id/tvHistory2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
