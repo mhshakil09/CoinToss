@@ -20,7 +20,9 @@ class MainActivity : AppCompatActivity() {
             //
             tvCoin.setBackgroundResource(R.drawable.circle_tv)
             tvCoin.text = "coin"
+
 //            tvCoin.setBackgroundColor(Color.parseColor("#4CAF50"))
+
             //
             coinAnimation()
             //
